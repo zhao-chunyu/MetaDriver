@@ -4,13 +4,9 @@
 <div align="center">
   <img src="assert\titlelogo.jpg" alt="logo" width="600" height="auto" />
 </div>
-# 
+------
 
-<div align="center">
-<img src="assert\highlight.jpg" width="auto" height="auto" />
-</div>
-
-> **Highlight**: This dataset we will upload in BaiduYun (please wait). Official web in [link](https://github.com/taodeng/CDNN-traffic-saliency "Official Traffic_Gaze").
+[TOC]
 
 ## 🔥Update
 
@@ -31,15 +27,19 @@
     - PSAD: 4 categories. It repartitioned into `PSAD-4i`.
 - **2025/02/01**: We propose a model in order to ``learn to learn`` driver attention in driving accident scenarios.
 
-## 💬Motivation [🔁](#start-anchor)
-
-​	**Using semantic information to guide driver attention**
+## 💬Highlight [🔁](#start-anchor)
 
 <div align="center">
 <img src="assert\highlight.jpg" width="auto" height="auto" />
 </div>
+### [1] Compare with Traditional Methods
 
-<b>Solution:</b> We propose a dual-branch network that separately extracts semantic information and image information. The semantic information is used to guide the image information at the deepest level of image feature extraction.
+
+
+### [2] Compare with Few-shot Methods
+
+
+
 
 ## ⚡Proposed Model [🔁](#start-anchor)
 
@@ -158,37 +158,59 @@ we propose a saliency mamba model, named **SalM²** that uses "Top-down" driving
 
 ## 🛠️ Deployment [🔁](#start-anchor)
 
-#### 		Environment
+### 		[1] Environment
 
-​	👉*If you have downloaded our `repository code` and installed `PyTorch` and `CUDA`.*  [More details](deployment.md#(1)-Environment)
+*If you have downloaded our `repository code` and installed `PyTorch` and `CUDA`.*  [More details](deployment.md#(1)-Environment)
 
 ```python
 pip install -r requirements.txt
 ```
 
-#### 		Run train 
+### 		[2] Run train
 
-​	👉*If you wish to train with our model, please use the command below.* [More details](deployment.md)
+*If you wish to train with our model, please use the command below.* [More details](deployment.md)
 
 ```python
-sh scripts/train_MetaDriver.sh
+sh scripts/train_MetaDriver.sh [datasaet] [split#] [backbone] [gpu]
 ```
 
-#### 		Run test
+> `dataset`: metadada, metapsad.
+>
+> `#`: 0, 1, 2, 3.
+>
+> `backbone`: resnet50, vgg.
+>
+> `gpu`: 0 or other.
 
-​	👉We calculate the predicted values and then use `Matlab` for the prediction. [More details](metrics/README.md)
-
+​	*Example:*
 ```python
-cd metrics
-./run_matlab.sh
+sh scripts/train_MetaDriver.sh metadada split0 resnet50 0
 ```
 
-#### 		Run visualization
+### 		[3] Run test
 
-​	👉*If you want to visualize all the data of a certain dataset directly, you can use the following command.*
+*We calculate the predicted values and then use python for the prediction.* [More details](metrics/README.md)
 
 ```python
-python visualization.py --network salmm --b 1 --g 0 --category xxx --root xxx --test_weight xxx
+sh scripts/test_MetaDriver.sh [datasaet] [split#] [backbone] [gpu]
+```
+
+​	*Example:*
+```python
+sh scripts/test_MetaDriver.sh metadada split0 resnet50 0
+```
+
+### 		[4] Run visualization
+
+*If you want to visualize all the data of a certain dataset directly, you can use the following command.*
+
+```python
+sh scripts/visual_MetaDriver.sh [datasaet] [split#] [backbone] [gpu]
+```
+
+​	*Example:*
+```python
+sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
 ```
 
 ## 🚀 Live Demo [🔁](#start-anchor)
