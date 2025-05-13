@@ -5,9 +5,11 @@
   <img src="assert\titlelogo.jpg" alt="logo" width="600" height="auto" />
 </div>
 
+<div align="center">
+<img src="assert\highlight.jpg" width="auto" height="auto" />
+</div>
 
-
-
+> **Highlight**: This dataset we will upload in BaiduYun (please wait). Official web in [link](https://github.com/taodeng/CDNN-traffic-saliency "Official Traffic_Gaze").
 
 ## 🔥Update
 
@@ -33,8 +35,9 @@
 ​	**Using semantic information to guide driver attention**
 
 <div align="center">
-<img src="assert\Motivation1.png" width="auto" height="auto" />
+<img src="assert\highlight.jpg" width="auto" height="auto" />
 </div>
+
 <b>Solution:</b> We propose a dual-branch network that separately extracts semantic information and image information. The semantic information is used to guide the image information at the deepest level of image feature extraction.
 
 ## ⚡Proposed Model [🔁](#start-anchor)
