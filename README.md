@@ -2,8 +2,9 @@
 <a name="start-anchor"></a>
 </div>
 <div align="center">
-  <img src="assert\titlelogo.jpg" alt="logo" width="800" height="auto" />
+  <img src="assert\titlelogo.jpg" alt="logo" width="600" height="auto" />
 </div>
+
 
 
 
@@ -16,7 +17,7 @@
     - How to evaluate:  [command](#Run-test ) & [script](deployment.md)
     - How to visualize:  [command](#Run-test ) & [script](deployment.md)
 
-- **2025/04/25**: We collect existing meta-learning methods for driver saliency prediction.
+- **2025/03/25**: We collect existing meta-learning methods for driver saliency prediction.
      - Environment configuration
      	- *metadriver*: `PFENet (TPAMI'22)`, `BAM (CVPR'22)`. [Details](supplementary.md)
      	- *metadriver_mmcv*: `HDMNet (CVPR'23)`, `AMNet (NIPS'23)`, `AENet (ECCV'24)`. [Details](supplementary.md)
@@ -40,7 +41,7 @@
 
 we propose a saliency mamba model, named **SalM²** that uses "Top-down" driving scene semantic information to guide "Bottom-up" driving scene image information to simulate human drivers' attention allocation. 
 
-<img src="assert\overview.jpg" style="zoom: 100%;">
+<img src="assert\model.jpg" style="zoom: 100%;">
 
 ## 📖Datasets [🔁](#start-anchor)
 <div align="center">
@@ -78,9 +79,9 @@ we propose a saliency mamba model, named **SalM²** that uses "Top-down" driving
 
 【note】 For all datasets we will provide our download link with the official link. Please choose according to your needs.
 
-> (1) **DADA-52i**: This dataset we will upload in BaiduYun. Official web in [link](https://github.com/taodeng/CDNN-traffic-saliency "Official Traffic_Gaze").
+> (1) **DADA-52i**: This dataset we will upload in BaiduYun (please wait). Official web in [link](https://github.com/taodeng/CDNN-traffic-saliency "Official Traffic_Gaze").
 >
-> (2) **PSAD-4i**: This dataset we uploaded in BaiduYun. We crop 5 frames before and after each video. Official web in [link](https://github.com/taodeng/DrFixD-rainy "Official DrFixD-rainy").
+> (2) **PSAD-4i**: This dataset we will upload in BaiduYun (please wait).  Official web in [link](https://github.com/taodeng/DrFixD-rainy "Official DrFixD-rainy").
 >
 
 <div align="center">
