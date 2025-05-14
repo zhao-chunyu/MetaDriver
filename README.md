@@ -141,7 +141,7 @@ sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
 
 ### 		[5] Sota Few-shot
 
-*If you want to run other comparison models, we already support several.*
+*If you want to run other comparison models, we have supported 6 SOTA models.*
 
 <details close>
 <summary>Supported model</summary>
