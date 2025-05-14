@@ -10,7 +10,7 @@
 ## 🔥Update
 
 - **2025/05/15**: All the code and models are completed.
-    - How to configure:  [command](#[1]-Environment ) & [script](deployment.md)
+    - How to configure:  [command](#envir-anchor) & [script](deployment.md)
     - How to train:  [command](#[2]-Run-train ) & [script](deployment.md)
     - How to evaluate:  [command](#[3]-Run-test ) & [script](deployment.md)
     - How to visualize:  [command](#[4]-Run-visualization ) & [script](deployment.md)
@@ -83,7 +83,9 @@ we propose a saliency mamba model, named **SalM²** that uses "Top-down" driving
 
 ## 🛠️ Deployment [🔁](#start-anchor)
 
-### 		[1] Environment
+<a name="envir-anchor"></a>
+
+### 		[1] Environment 
 
 *If you have downloaded our `repository code` and installed `PyTorch` and `CUDA`.*  [More details](deployment.md#(1)-Environment)
 
