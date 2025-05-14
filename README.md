@@ -5,22 +5,22 @@
   <img src="assert\titlelogo.jpg" alt="logo" width="600" height="auto" />
 </div>
 
----
+<hr />
 
 ## 🔥Update
 
 - **2025/05/15**: All the code and models are completed.
     - How to configure:  [command](#envir-anchor) & [script](deployment.md)
-    - How to train:  [command](#[2]-Run-train ) & [script](deployment.md)
-    - How to evaluate:  [command](#[3]-Run-test ) & [script](deployment.md)
-    - How to visualize:  [command](#[4]-Run-visualization ) & [script](deployment.md)
+    - How to train:  [command](#run-train)
+    - How to evaluate:  [command](#run-test )
+    - How to visualize:  [command](#run-visualization )
 
 - **2025/03/25**: We collect existing meta-learning methods for driver saliency prediction.
      - Environment configuration
-     	- *metadriver*: `PFENet (TPAMI'22)`, `BAM (CVPR'22)`. [Details](supplementary.md)
-     	- *metadriver_mmcv*: `HDMNet (CVPR'23)`, `AMNet (NIPS'23)`, `AENet (ECCV'24)`. [Details](supplementary.md)
-     	- *metadriver_mamba*: `HMNet (NIPS'24)`. [Details](supplementary.md)
-     - How to use: [command](#[5]-Sota-Few-shot) & [script](deployment.md)
+     	- *metadriver*: `PFENet (TPAMI'22)`, `BAM (CVPR'22)`. [Details](deployment.md)
+     	- *metadriver_mmcv*: `HDMNet (CVPR'23)`, `AMNet (NIPS'23)`, `AENet (ECCV'24)`. [Details](deployment.md)
+     	- *metadriver_mamba*: `HMNet (NIPS'24)`. [Details](deployment.md)
+     - How to use: [command](#run-fewshot)
 - **2025/02/05**: We collect driving accident data with data categories, divided into 4 folds by category.
     - DADA: 52 categories. It repartitioned into `DADA-52i`.
     - PSAD: 4 categories. It repartitioned into `PSAD-4i`.
@@ -92,6 +92,7 @@ we propose a saliency mamba model, named **SalM²** that uses "Top-down" driving
 ```python
 pip install -r requirements.txt
 ```
+<a name="run-train"></a>
 
 ### 		[2] Run train
 
@@ -113,6 +114,7 @@ sh scripts/train_MetaDriver.sh [datasaet] [split#] [backbone] [gpu]
 ```python
 sh scripts/train_MetaDriver.sh metadada split0 resnet50 0
 ```
+<a name="run-test"></a>
 
 ### 		[3] Run test
 
@@ -127,6 +129,8 @@ sh scripts/test_MetaDriver.sh [datasaet] [split#] [backbone] [gpu]
 sh scripts/test_MetaDriver.sh metadada split0 resnet50 0
 ```
 
+<a name="run-visualization"></a>
+
 ### 		[4] Run visualization
 
 *If you want to visualize all the data of a certain dataset directly, you can use the following command.*
@@ -139,6 +143,7 @@ sh scripts/visual_MetaDriver.sh [datasaet] [split#] [backbone] [gpu]
 ```python
 sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
 ```
+<a name="run-fewshot"></a>
 
 ### 		[5] Sota Few-shot
 
@@ -157,7 +162,6 @@ sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
   </tr></thead>
 </table>
 </details>
-
 *Then, you can run the following command.*
 
 ```python
