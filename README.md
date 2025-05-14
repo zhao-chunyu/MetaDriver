@@ -156,6 +156,8 @@ sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
   </tr></thead>
 </table>
 
+</details>
+
 *Then, you can run the following command.*
 
 ```python
