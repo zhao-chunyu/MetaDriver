@@ -76,10 +76,9 @@ we propose a saliency mamba model, named **SalM²** that uses "Top-down" driving
 
 【note】 For all datasets we will provide our download link with the official link. Please choose according to your needs.
 
-> (1) **DADA-52i**: This dataset we will upload in BaiduYun (please wait). Official web in [link](https://github.com/taodeng/CDNN-traffic-saliency "Official Traffic_Gaze").
+> **DADA-52i**: This dataset we will upload in BaiduYun (please wait). Official web in [link](https://github.com/JWFangit/LOTVS-DADA "Official DADA").
 >
-> (2) **PSAD-4i**: This dataset we will upload in BaiduYun (please wait).  Official web in [link](https://github.com/taodeng/DrFixD-rainy "Official DrFixD-rainy").
->
+> **PSAD-4i**: This dataset we will upload in BaiduYun (please wait).  Official web in [link](https://github.com/Shun-Gan/PSAD-dataset "Official PSAD").
 
 
 ## 🛠️ Deployment [🔁](#start-anchor)
