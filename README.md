@@ -3,9 +3,8 @@
 </div>
 <div align="center">
   <img src="assert\titlelogo.jpg" alt="logo" width="600" height="auto" />
+  <hr />
 </div>
-
-<hr />
 
 ## 🔥Update
 
