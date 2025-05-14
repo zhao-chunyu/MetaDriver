@@ -5,7 +5,7 @@
   <img src="assert\titlelogo.jpg" alt="logo" width="600" height="auto" />
 </div>
 
-------
+---
 
 ## 🔥Update
 
@@ -94,7 +94,7 @@ pip install -r requirements.txt
 
 ### 		[2] Run train
 
-*If you wish to train with our model, please use the command below.* [More details](deployment.md)
+*If you wish to train with our model, please use the command below.* 
 
 ```python
 sh scripts/train_MetaDriver.sh [datasaet] [split#] [backbone] [gpu]
@@ -115,7 +115,7 @@ sh scripts/train_MetaDriver.sh metadada split0 resnet50 0
 
 ### 		[3] Run test
 
-*We calculate the predicted values and then use python for the prediction.* [More details](metrics/README.md)
+*We calculate the predicted values and then use python for the prediction.* 
 
 ```python
 sh scripts/test_MetaDriver.sh [datasaet] [split#] [backbone] [gpu]
@@ -147,15 +147,14 @@ sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
 <summary>Supported model</summary>
 <table class="tg"><thead>
   <tr>
-    <td class="tg-0pky"><a href="">PFENet (TPMAI'22)</a></td>
-    <td class="tg-0pky"><a href="">BAM (CVPR'22)</td>
-    <td class="tg-0pky"><a href="">HDMNet (CVPR'22)</td>
-    <td class="tg-0pky"><a href="">AMNet (NIPS'23)</td>
-    <td class="tg-0pky"><a href="">HMNet (NIPS'24)</td>
-    <td class="tg-0pky"><a href="">AENet (ECCV'24)</td>
+    <td class="tg-0pky"><a href="https://github.com/dvlab-research/PFENet">PFENet (TPMAI'22)</a></td>
+    <td class="tg-0pky"><a href="https://github.com/chunbolang/BAM">BAM (CVPR'22)</td>
+    <td class="tg-0pky"><a href="https://github.com/Pbihao/HDMNet">HDMNet (CVPR'22)</td>
+    <td class="tg-0pky"><a href="https://github.com/Wyxdm/AMNet">AMNet (NIPS'23)</td>
+    <td class="tg-0pky"><a href="https://github.com/Sam1224/HMNet">HMNet (NIPS'24)</td>
+    <td class="tg-0pky"><a href="https://github.com/Sam1224/AENet">AENet (ECCV'24)</td>
   </tr></thead>
 </table>
-
 </details>
 
 *Then, you can run the following command.*
