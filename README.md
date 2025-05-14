@@ -10,17 +10,17 @@
 ## 🔥Update
 
 - **2025/05/15**: All the code and models are completed.
-    - How to configure:  [command](#Run-train ) & [script](deployment.md)
-    - How to train:  [command](#Run-train ) & [script](deployment.md)
-    - How to evaluate:  [command](#Run-test ) & [script](deployment.md)
-    - How to visualize:  [command](#Run-test ) & [script](deployment.md)
+    - How to configure:  [command](#[1]-Environment ) & [script](deployment.md)
+    - How to train:  [command](#[2]-Run-train ) & [script](deployment.md)
+    - How to evaluate:  [command](#[3]-Run-test ) & [script](deployment.md)
+    - How to visualize:  [command](#[4]-Run-visualization ) & [script](deployment.md)
 
 - **2025/03/25**: We collect existing meta-learning methods for driver saliency prediction.
      - Environment configuration
      	- *metadriver*: `PFENet (TPAMI'22)`, `BAM (CVPR'22)`. [Details](supplementary.md)
      	- *metadriver_mmcv*: `HDMNet (CVPR'23)`, `AMNet (NIPS'23)`, `AENet (ECCV'24)`. [Details](supplementary.md)
      	- *metadriver_mamba*: `HMNet (NIPS'24)`. [Details](supplementary.md)
-     - How to Use? [Details](supplementary.md)
+     - How to use: [command](#[5]-Sota-Few-shot) & [script](deployment.md)
 - **2025/02/05**: We collect driving accident data with data categories, divided into 4 folds by category.
     - DADA: 52 categories. It repartitioned into `DADA-52i`.
     - PSAD: 4 categories. It repartitioned into `PSAD-4i`.
@@ -31,12 +31,6 @@
 <div align="center">
 <img src="assert\highlight.jpg" width="auto" height="auto" />
 </div>
-### [1] Compare with Traditional Methods
-
-
-
-### [2] Compare with Few-shot Methods
-
 
 
 
@@ -87,73 +81,6 @@ we propose a saliency mamba model, named **SalM²** that uses "Top-down" driving
 > (2) **PSAD-4i**: This dataset we will upload in BaiduYun (please wait).  Official web in [link](https://github.com/taodeng/DrFixD-rainy "Official DrFixD-rainy").
 >
 
-<div align="center">
-<table style="width: 100%; table-layout: auto;">
-  <tr>
-    <th>TrafficGaze</th>
-    <th>DrFixD-rainy</th>
-    <th>BDDA</th>
-  </tr>
-  <tr>
-    <td>
-      ./TrafficGaze<br>
-      &emsp;&emsp;|——fixdata<br>
-      &emsp;&emsp;|&emsp;&emsp;|——fixdata1.mat<br>
-      &emsp;&emsp;|&emsp;&emsp;|——fixdata2.mat<br>
-      &emsp;&emsp;|&emsp;&emsp;|—— ... ...<br>
-      &emsp;&emsp;|&emsp;&emsp;|——fixdata16.mat<br>
-      &emsp;&emsp;|——trafficframe<br>
-      &emsp;&emsp;|&emsp;&emsp;|——01<br>
-      &emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|——000001.jpg<br>
-      &emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|—— ... ...<br>
-      &emsp;&emsp;|&emsp;&emsp;|——02<br>
-      &emsp;&emsp;|&emsp;&emsp;|—— ... ...<br>
-      &emsp;&emsp;|&emsp;&emsp;|——16<br>
-      &emsp;&emsp;|——test.json<br>
-      &emsp;&emsp;|——train.json<br>
-      &emsp;&emsp;|——valid.json
-    </td>
-    <td>
-      ./DrFixD-rainy<br>
-      &emsp;&emsp;|——fixdata<br>
-      &emsp;&emsp;|&emsp;&emsp;|——fixdata1.mat<br>
-      &emsp;&emsp;|&emsp;&emsp;|——fixdata2.mat<br>
-      &emsp;&emsp;|&emsp;&emsp;|—— ... ...<br>
-      &emsp;&emsp;|&emsp;&emsp;|——fixdata16.mat<br>
-      &emsp;&emsp;|——trafficframe<br>
-      &emsp;&emsp;|&emsp;&emsp;|——01<br>
-      &emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|——000001.jpg<br>
-      &emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|—— ... ...<br>
-      &emsp;&emsp;|&emsp;&emsp;|——02<br>
-      &emsp;&emsp;|&emsp;&emsp;|—— ... ...<br>
-      &emsp;&emsp;|&emsp;&emsp;|——16<br>
-      &emsp;&emsp;|——test.json<br>
-      &emsp;&emsp;|——train.json<br>
-      &emsp;&emsp;|——valid.json
-    </td>
-    <td>
-      ./BDDA<br>
-      &emsp;&emsp;|——camera_frames<br>
-      &emsp;&emsp;|&emsp;&emsp;|——0001<br>
-      &emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|——0001.jpg<br>
-      &emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|—— ... ...<br>
-      &emsp;&emsp;|&emsp;&emsp;|——0002<br>
-      &emsp;&emsp;|&emsp;&emsp;|—— ... ...<br>
-      &emsp;&emsp;|&emsp;&emsp;|——2017<br>
-      &emsp;&emsp;|——gazemap_frames<br>
-      &emsp;&emsp;|&emsp;&emsp;|——0001<br>
-      &emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|——0001.jpg<br>
-      &emsp;&emsp;|&emsp;&emsp;|&emsp;&emsp;|—— ... ...<br>
-      &emsp;&emsp;|&emsp;&emsp;|——0002<br>
-      &emsp;&emsp;|&emsp;&emsp;|—— ... ...<br>
-      &emsp;&emsp;|&emsp;&emsp;|——2017<br>
-      &emsp;&emsp;|——test.json<br>
-      &emsp;&emsp;|——train.json<br>
-      &emsp;&emsp;|——valid.json
-    </td>
-  </tr>
-</table>
-</div>
 
 ## 🛠️ Deployment [🔁](#start-anchor)
 
@@ -211,6 +138,45 @@ sh scripts/visual_MetaDriver.sh [datasaet] [split#] [backbone] [gpu]
 ```python
 sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
 ```
+
+### 		[5] Sota Few-shot
+
+*If you want to run other comparison models, we already support several.*
+
+<details close>
+<summary>Supported model</summary>
+<table class="tg"><thead>
+  <tr>
+    <td class="tg-0pky"><a href="">PFENet (TPMAI'22)</a></td>
+    <td class="tg-0pky"><a href="">BAM (CVPR'22)</td>
+    <td class="tg-0pky"><a href="">HDMNet (CVPR'22)</td>
+    <td class="tg-0pky"><a href="">AMNet (NIPS'23)</td>
+    <td class="tg-0pky"><a href="">HMNet (NIPS'24)</td>
+    <td class="tg-0pky"><a href="">AENet (ECCV'24)</td>
+  </tr></thead>
+</table>
+
+*Then, you can run the following command.*
+
+```python
+sh scripts/[train_*.sh] [dataset] [split#] [backbone] [gpu]
+```
+> `*`: PFENet, BAM, HDMNet, AMNet, HMNet, AENet.
+>
+> `dataset`: metadada, metapsad.
+>
+> `#`: 0, 1, 2, 3.
+>
+> `backbone`: resnet50, vgg.
+>
+> `gpu`: 0 or other.
+
+​	*Example:*
+```python
+sh scripts/train_PFENet.sh metadada split0 resnet50 0
+```
+> Model result `testing` and model result `visualization` are similar to our `MetaDriver` model.
+
 
 ## 🚀 Live Demo [🔁](#start-anchor)
 
