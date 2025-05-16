@@ -27,9 +27,6 @@
 
 ## 💬Highlight [🔁](#start-anchor)
 
-<div align="center">
-<img src="assert\highlight.jpg" width="auto" height="auto" />
-</div>
 
 
 
