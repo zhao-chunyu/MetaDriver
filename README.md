@@ -23,6 +23,21 @@ Anonymous Author(s)
 </div>
 
 
+## 📚Table of Contents
+
+* [🔥Update](#update)
+* [⚡Proposed Model](#model)
+* [📖Datasets](#Datasets)
+* [🛠️Deployment](#Deployment)
+  + [`[1]Environment`](#envir-anchor)
+  + [`[2]Run train`](#run-train)
+  + [`[3]Run test`](#run-test)
+  + [`[4]Run visualization`](#run-visualization)
+  + [`[5]Sota One/Few-shot`](#run-fewshot)
+* [🚀Demo](#Demo)
+* [⭐️Cite](#Cite)
+
+<a name="update"></a>
 
 ## 🔥Update
 
@@ -34,7 +49,7 @@ Anonymous Author(s)
 
 - **2025/03/25**: We collect existing meta-learning methods for driver saliency prediction.
      - Environment configuration
-     	- *metadriver*: `PFENet (TPAMI'22)`, `BAM (CVPR'22)`. [Details](models/Deployment.md)
+     	- *metadriver_ori*: `PFENet (TPAMI'22)`, `BAM (CVPR'22)`. [Details](models/Deployment.md)
      	- *metadriver_mmcv*: `HDMNet (CVPR'23)`, `AMNet (NIPS'23)`, `AENet (ECCV'24)`. [Details](models/Deployment.md)
      - How to use: [command](#run-fewshot) & [script](models/Deployment.md)
 - **2025/02/05**: We collect driving accident data with data categories, divided into 4 folds by category.
@@ -42,6 +57,7 @@ Anonymous Author(s)
     - PSAD: 4 categories. It repartitioned into `PSAD-4i`.
 - **2025/02/01**: We propose a model in order to ``learn to learn`` driver attention in driving accident scenarios.
 
+<a name="model"></a>
 
 ## ⚡Proposed Model [🔁](#start-anchor)
 
@@ -55,6 +71,8 @@ Inspired by how humans learn from limited examples, we filter support masks to e
 Since driver attention masks are often dispersed and semantic overlap between query-support pairs exists only in salient regions, we filter out irrelevant mask information and align salient semantic features to boost prediction accuracy.
 3. **Extensive evaluation on DADA-52i and PSAD-4i with SOTA results**. 
 Our method consistently outperforms 10 competitive baselines across both datasets and backbones (Resnet-50, Vgg-16), surpassing existing driver saliency prediction and one/few-shot models.
+
+<a name="Datasets"></a>
 
 ## 📖Datasets [🔁](#start-anchor)
 
@@ -143,9 +161,9 @@ MetaPSAD/
   </tbody>
 </table>
 
+<a name="Deployment"></a>
 
-
-## 🛠️ Deployment [🔁](#start-anchor)
+## 🛠️Deployment [🔁](#start-anchor)
 
 <a name="envir-anchor"></a>
 
@@ -269,12 +287,15 @@ sh scripts/train_PFENet.sh metadada split0 resnet50 0
 ```
 > Model result `testing` and model result `visualization` are similar to our `MetaDriver` model.
 
+<a name="Demo"></a>
 
-## 🚀 Demo [🔁](#start-anchor)
+## 🚀Demo [🔁](#start-anchor)
 
 <img src="assert\compare.png" style="zoom: 100%;">
 
-## ⭐️ Cite [🔁](#start-anchor)
+<a name="Cite"></a>
+
+## ⭐️Cite [🔁](#start-anchor)
 
 
 If you find this repository useful, please use the following BibTeX entry for citation  and give us a star⭐.

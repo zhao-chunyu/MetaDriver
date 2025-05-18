@@ -2,21 +2,21 @@
 
 ## 📚Table of Contents
 
-* [⚙️Environment for MetaDriver](#⚙️environment-for-metadriver)
-  + [🛠️Envir: MetaDriver](#our)
+* [⚙️Environment for MetaDriver](#MetaDriver)
+  + [🛠️Envir: MetaDriver](#MetaDriver1)
 * [⚙️Environment for One/Few-shot](#fewshot)
   + [🛠️Envir: MetaDriver_ori](#fewshot1)
   + [🛠️Envir: MetaDriver_mmcv](#fewshot2)
-* [🔧Utilities](#🔧utilities)
-  + [🗂️One-click to modify dataset path](#🗂️one-click-to-modify-dataset-path)
-  + [📊One-click to collect metrics data](#📊one-click-to-collect-metrics-data)
-* [⭐️Cite](#⭐️cite)
+* [🔧Utilities](#Utilities)
+  + [🗂️One-click to modify dataset path](#Utilities1)
+  + [📊One-click to collect metrics data](#Utilities2)
+* [⭐️Cite](#Cite)
 
 <a name="MetaDriver"></a>
 
 ## 		⚙️Environment for MetaDriver
 
-<a name="our"></a>
+<a name="MetaDriver1"></a>
 
 ### 	🛠️Envir: MetaDriver
 
@@ -116,7 +116,11 @@ pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https
 pip install -r utils/metadriver_mmcv.txt
 ```
 
+<a name="Utilities"></a>
+
 ## 🔧Utilities
+
+<a name="Utilities1"></a>
 
 ### 	🗂️One-click to modify dataset path
 
@@ -130,16 +134,21 @@ python utils/modify_yaml.py
 
 > You need to change two params in your `utils/modify_yaml.py` to the path to your dataset. (params: `new_dada_data_root`, `new_psad_data_root`)
 
+<a name="Utilities2"></a>
+
 ### 📊One-click to collect metrics data
 
 Even though we've stored the metrics in `.xlsx` file when calculating them, it's still inconvenient to have too many files. We provide a script for one-click collection of these metrics.
 
 ```python
+# data_set = 'dada' or 'psad'     # Replace it with your testing.
 cd utils
 python collect_metrics.py
 ```
 
 > You need to change a params in your `utils/collect_metrics.py` to change the dataset name. (param: `dataset`)
+
+<a name="Cite"></a>
 
 ## ⭐️Cite
 
