@@ -154,7 +154,7 @@ MetaPSAD/
 * Git clone this repository
 
 ```python
-git clone https://github.com/***/MetaDriver.git
+git clone https://github.com/zhao-chunyu/MetaDriver.git
 cd MetaDriver
 ```
 
