@@ -42,16 +42,16 @@ Anonymous Author(s)
 ## 🔥Update
 
 - **2025/05/15**: All the code and models are completed.
-    - How to configure:  [command](#envir-anchor) & [script](models/Deployment.md)
+    - How to configure:  [command](#envir-anchor) & [script](models/Deployment.md#MetaDriver1)
     - How to train:  [command](#run-train)
     - How to evaluate:  [command](#run-test )
     - How to visualize:  [command](#run-visualization )
 
 - **2025/03/25**: We collect existing meta-learning methods for driver saliency prediction.
      - Environment configuration
-     	- *metadriver_ori*: `PFENet (TPAMI'22)`, `BAM (CVPR'22)`. [Details](models/Deployment.md)
-     	- *metadriver_mmcv*: `HDMNet (CVPR'23)`, `AMNet (NIPS'23)`, `AENet (ECCV'24)`. [Details](models/Deployment.md)
-     - How to use: [command](#run-fewshot) & [script](models/Deployment.md)
+     	- *metadriver_ori*: `PFENet (TPAMI'22)`, `BAM (CVPR'22)`. [Details](models/Deployment.md#fewshot1)
+     	- *metadriver_mmcv*: `HDMNet (CVPR'23)`, `AMNet (NIPS'23)`, `AENet (ECCV'24)`. [Details](models/Deployment.md#fewshot2)
+     - How to use: [command](#run-fewshot) & [script](models/Deployment.md#fewshot)
 - **2025/02/05**: We collect driving accident data with data categories, divided into 4 folds by category.
     - DADA: 52 categories. It repartitioned into `DADA-52i`.
     - PSAD: 4 categories. It repartitioned into `PSAD-4i`.
@@ -199,6 +199,8 @@ pip install -r utils/requirements.txt
 
 ### 		[2] Run train
 
+> Before training, scripts you might use: `modify_yaml.py`: One-click to modify dataset path. [Details](models/Deployment.md#Utilities1)
+
 *If you wish to train with our model, please use the command below.* 
 
 ```python
@@ -232,6 +234,8 @@ sh scripts/test_MetaDriver.sh [datasaet] [split#] [backbone] [gpu]
 sh scripts/test_MetaDriver.sh metadada split0 resnet50 0
 ```
 
+> After testing, scripts you might use: `collect_metrics.py`: One-click to collect metrics data. [Details](models/Deployment.md#Utilities2)
+
 <a name="run-visualization"></a>
 
 ### 		[4] Run visualization
@@ -246,11 +250,12 @@ sh scripts/visual_MetaDriver.sh [datasaet] [split#] [backbone] [gpu]
 ```python
 sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
 ```
+
 <a name="run-fewshot"></a>
 
 ### 		[5] Sota One/Few-shot
 
-*If you want to run other comparison models, we have supported 5 SOTA models.*  [Deployment script](models/Deployment.md#fewshot)
+*If you want to run other comparison models, we have supported 5 SOTA models.*  [Details](models/Deployment.md#fewshot)
 
 <details close>
 <summary>Supported model</summary>
