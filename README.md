@@ -3,8 +3,8 @@
 </div>
 <div align="center">
   <img src="assert\titlelogo.jpg" alt="logo" width="600" height="auto" />
-  <hr />
 </div>
+<img src="assert\dataset_cases.gif" style="zoom: 100%;">
 
 
 ## 🔥Update
@@ -144,7 +144,7 @@ sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
 ```
 <a name="run-fewshot"></a>
 
-### 		[5] Sota Few-shot
+### 		[5] Sota One/Few-shot
 
 *If you want to run other comparison models, we have supported 5 SOTA models.*
 
@@ -185,12 +185,7 @@ sh scripts/train_PFENet.sh metadada split0 resnet50 0
 
 ## 🚀 Demo [🔁](#start-anchor)
 
-<div align="center">
-  <img src="assert/demo-example1.gif" alt="BDDA-1" width="230" height="auto" />
-  <img src="assert/demo-example2.gif" alt="BDDA-2" width="230" height="auto" />
-  <img src="assert/demo-example3.gif" alt="BDDA-3" width="230" height="auto" />
-</div>
-
+<img src="assert\compare.png" style="zoom: 100%;">
 
 ## ⭐️ Cite [🔁](#start-anchor)
 
