@@ -10,31 +10,34 @@
 ## 🔥Update
 
 - **2025/05/15**: All the code and models are completed.
-    - How to configure:  [command](#envir-anchor) & [script](deployment.md)
+    - How to configure:  [command](#envir-anchor) & [script](models/Deployment.md)
     - How to train:  [command](#run-train)
     - How to evaluate:  [command](#run-test )
     - How to visualize:  [command](#run-visualization )
 
 - **2025/03/25**: We collect existing meta-learning methods for driver saliency prediction.
      - Environment configuration
-     	- *metadriver*: `PFENet (TPAMI'22)`, `BAM (CVPR'22)`. [Details](deployment.md)
-     	- *metadriver_mmcv*: `HDMNet (CVPR'23)`, `AMNet (NIPS'23)`, `AENet (ECCV'24)`. [Details](deployment.md)
-     - How to use: [command](#run-fewshot)
+     	- *metadriver*: `PFENet (TPAMI'22)`, `BAM (CVPR'22)`. [Details](models/Deployment.md)
+     	- *metadriver_mmcv*: `HDMNet (CVPR'23)`, `AMNet (NIPS'23)`, `AENet (ECCV'24)`. [Details](models/Deployment.md)
+     - How to use: [command](#run-fewshot) & [script](models/Deployment.md)
 - **2025/02/05**: We collect driving accident data with data categories, divided into 4 folds by category.
     - DADA: 52 categories. It repartitioned into `DADA-52i`.
     - PSAD: 4 categories. It repartitioned into `PSAD-4i`.
 - **2025/02/01**: We propose a model in order to ``learn to learn`` driver attention in driving accident scenarios.
 
-## 💬Highlight [🔁](#start-anchor)
-
-
-
 
 ## ⚡Proposed Model [🔁](#start-anchor)
 
-we propose a saliency mamba model, named **SalM²** that uses "Top-down" driving scene semantic information to guide "Bottom-up" driving scene image information to simulate human drivers' attention allocation. 
+we propose a framework that combines a one-shot learning strategy with scene-level semantic alignment, enabling the model to achieve human-like attentional perception in previously unseen scenarios. (named **MetaDriver**)
 
 <img src="assert\model.png" style="zoom: 100%;">
+
+1. **A one-shot learning framework for drivers' attention prediction**. 
+Inspired by how humans learn from limited examples, we filter support masks to extract salient regions, which are then used to guide a driver attention learner. Semantic alignment between support and query samples further refines model optimization.
+2. **Two novel modules: Saliency Map Filter and Salient Semantic Alignment**. 
+Since driver attention masks are often dispersed and semantic overlap between query-support pairs exists only in salient regions, we filter out irrelevant mask information and align salient semantic features to boost prediction accuracy.
+3. **Extensive evaluation on DADA-52i and PSAD-4i with SOTA results**. 
+Our method consistently outperforms 10 competitive baselines across both datasets and backbones (Resnet-50, Vgg-16), surpassing existing driver saliency prediction and one/few-shot models.
 
 ## 📖Datasets [🔁](#start-anchor)
 <div align="center">
@@ -83,10 +86,10 @@ we propose a saliency mamba model, named **SalM²** that uses "Top-down" driving
 
 ### 		[1] Environment 
 
-*If you have downloaded our `repository code` and installed `PyTorch` and `CUDA`.*  [More details](deployment.md#(1)-Environment)
+*If you have downloaded our `repository code` and installed `PyTorch` and `CUDA`.*  [More details](models/Deployment.md#(1)-Environment)
 
 ```python
-pip install -r requirements.txt
+pip install -r utils/requirements.txt
 ```
 <a name="run-train"></a>
 
@@ -143,7 +146,7 @@ sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
 
 ### 		[5] Sota Few-shot
 
-*If you want to run other comparison models, we have supported 6 SOTA models.*
+*If you want to run other comparison models, we have supported 5 SOTA models.*
 
 <details close>
 <summary>Supported model</summary>
@@ -158,7 +161,6 @@ sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
   </tr></thead>
 </table>
 </details>
-
 *Then, you can run the following command.*
 
 ```python
@@ -181,7 +183,7 @@ sh scripts/train_PFENet.sh metadada split0 resnet50 0
 > Model result `testing` and model result `visualization` are similar to our `MetaDriver` model.
 
 
-## 🚀 Live Demo [🔁](#start-anchor)
+## 🚀 Demo [🔁](#start-anchor)
 
 <div align="center">
   <img src="assert/demo-example1.gif" alt="BDDA-1" width="230" height="auto" />
