@@ -83,7 +83,7 @@ Our method consistently outperforms 10 competitive baselines across both dataset
 >
 > **PSAD-4i**: This dataset we will upload in BaiduYun (please wait).  Official web in [link](https://github.com/Shun-Gan/PSAD-dataset "Official PSAD").
 
-<table align="center" border="0" cellspacing="10" cellpadding="10">
+<table align="center" border="0" cellspacing="30" cellpadding="30">
   <thead>
     <tr>
       <th>DADA-52i</th>
