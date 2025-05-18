@@ -4,6 +4,20 @@
 <div align="center">
   <img src="assert\titlelogo.jpg" alt="logo" width="600" height="auto" />
 </div>
+
+<div align="center">
+Anonymous Author(s)
+</div>
+<div align="center">
+ Affiliation
+ </div>
+<div align="center">
+ Address
+ </div>
+<div align="center">
+ email
+ </div>
+
 <div align="center">
   <img src="assert\dataset_cases.gif" alt="logo" width="800" height="auto" />
 </div>
@@ -137,11 +151,32 @@ MetaPSAD/
 
 ### 		[1] Environment 
 
-*If you have downloaded our `repository code` and installed `PyTorch` and `CUDA`.*  [More details](models/Deployment.md#(1)-Environment)
+* Git clone this repository
+
+```python
+git clone https://github.com/zhao-chunyu/MetaDriver.git
+cd MetaDriver
+```
+
+* Create conda environment
+
+```python
+conda create -n MetaDriver python=3.11
+conda activate MetaDriver
+```
+
+* Install PyTorch 2.5.1+cu121
+
+```python
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+```
+
+* Install requirement
 
 ```python
 pip install -r utils/requirements.txt
 ```
+
 <a name="run-train"></a>
 
 ### 		[2] Run train
@@ -218,7 +253,7 @@ sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
 ```python
 sh scripts/[train_*.sh] [dataset] [split#] [backbone] [gpu]
 ```
-> `*`: PFENet, BAM, HDMNet, AMNet, HMNet, AENet.
+> `*`: PFENet, BAM, HDMNet, AMNet, AENet.
 >
 > `dataset`: metadada, metapsad.
 >

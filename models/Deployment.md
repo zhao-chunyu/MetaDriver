@@ -4,13 +4,17 @@
 
 ## 		Environment 
 
+### [1] MetaDriver
 
+```python
+sh scripts/train_MetaDriver.sh metadada split0 resnet50 0
+```
 
 
 
 <a name="run-train"></a>
 
-### 		[2] Run train
+### 		[2] Sota One/Few-shot
 
 *If you wish to train with our model, please use the command below.* 
 
