@@ -4,7 +4,10 @@
 <div align="center">
   <img src="assert\titlelogo.jpg" alt="logo" width="600" height="auto" />
 </div>
-<img src="assert\dataset_cases.gif" style="zoom: 100%;">
+<div align="center">
+  <img src="assert\dataset_cases.gif" alt="logo" width="800" height="auto" />
+</div>
+
 
 
 ## 🔥Update
