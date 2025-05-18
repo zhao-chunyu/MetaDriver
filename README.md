@@ -97,22 +97,23 @@ Our method consistently outperforms 10 competitive baselines across both dataset
     <tr>
       <td>DADA-52i</td>
       <td>52</td>
-      <td>a pedestrian crosses the road. ...</td>
-      <td>there is an object crash. ...</td>
-      <td>a motorbike is out of control. ...</td>
-      <td>vehicle changes lane with the same direction to ego-car. ...</td>
+      <td>[1] a pedestrian crosses the road. ...</td>
+      <td>[14] there is an object crash. ...</td>
+      <td>[27] a motorbike is out of control. ...</td>
+      <td>[40] vehicle changes lane with the same direction to ego-car. ...</td>
     </tr>
     <tr>
       <td>PSAD-4i</td>
       <td>4</td>
-      <td>a pedestrian crosses the road.</td>
-      <td>there is an object crash.</td>
-      <td>a motorbike is out of control.</td>
-      <td>vehicle changes lane with the same direction to ego-car.</td>
+      <td>moving ahead or waiting.</td>
+      <td>lateral.</td>
+      <td>oncoming.</td>
+      <td>turning.</td>
     </tr>
   </tbody>
-</table>
+</table> 
 </div>
+
 
 【note】 For all datasets we will provide our download link with the official link. Please choose according to your needs.
 
