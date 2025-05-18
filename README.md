@@ -6,6 +6,7 @@
   <hr />
 </div>
 
+
 ## 🔥Update
 
 - **2025/05/15**: All the code and models are completed.
@@ -18,7 +19,6 @@
      - Environment configuration
      	- *metadriver*: `PFENet (TPAMI'22)`, `BAM (CVPR'22)`. [Details](deployment.md)
      	- *metadriver_mmcv*: `HDMNet (CVPR'23)`, `AMNet (NIPS'23)`, `AENet (ECCV'24)`. [Details](deployment.md)
-     	- *metadriver_mamba*: `HMNet (NIPS'24)`. [Details](deployment.md)
      - How to use: [command](#run-fewshot)
 - **2025/02/05**: We collect driving accident data with data categories, divided into 4 folds by category.
     - DADA: 52 categories. It repartitioned into `DADA-52i`.
@@ -34,7 +34,7 @@
 
 we propose a saliency mamba model, named **SalM²** that uses "Top-down" driving scene semantic information to guide "Bottom-up" driving scene image information to simulate human drivers' attention allocation. 
 
-<img src="assert\model.jpg" style="zoom: 100%;">
+<img src="assert\model.png" style="zoom: 100%;">
 
 ## 📖Datasets [🔁](#start-anchor)
 <div align="center">
@@ -149,15 +149,16 @@ sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
 <summary>Supported model</summary>
 <table class="tg"><thead>
   <tr>
+    <td class="tg-0pky">Model</td>
     <td class="tg-0pky"><a href="https://github.com/dvlab-research/PFENet">PFENet (TPMAI'22)</a></td>
     <td class="tg-0pky"><a href="https://github.com/chunbolang/BAM">BAM (CVPR'22)</td>
     <td class="tg-0pky"><a href="https://github.com/Pbihao/HDMNet">HDMNet (CVPR'22)</td>
     <td class="tg-0pky"><a href="https://github.com/Wyxdm/AMNet">AMNet (NIPS'23)</td>
     <td class="tg-0pky"><a href="https://github.com/Sam1224/HMNet">HMNet (NIPS'24)</td>
-    <td class="tg-0pky"><a href="https://github.com/Sam1224/AENet">AENet (ECCV'24)</td>
   </tr></thead>
 </table>
 </details>
+
 *Then, you can run the following command.*
 
 ```python
