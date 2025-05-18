@@ -206,12 +206,13 @@ sh scripts/visual_MetaDriver.sh metadada split0 resnet50 0
     <td class="tg-0pky">Model</td>
     <td class="tg-0pky"><a href="https://github.com/dvlab-research/PFENet">PFENet (TPMAI'22)</a></td>
     <td class="tg-0pky"><a href="https://github.com/chunbolang/BAM">BAM (CVPR'22)</td>
-    <td class="tg-0pky"><a href="https://github.com/Pbihao/HDMNet">HDMNet (CVPR'22)</td>
+    <td class="tg-0pky"><a href="https://github.com/Pbihao/HDMNet">HDMNet (CVPR'23)</td>
     <td class="tg-0pky"><a href="https://github.com/Wyxdm/AMNet">AMNet (NIPS'23)</td>
-    <td class="tg-0pky"><a href="https://github.com/Sam1224/HMNet">HMNet (NIPS'24)</td>
+    <td class="tg-0pky"><a href="https://github.com/Sam1224/AENet">AENet (ECCV'24)</td>
   </tr></thead>
 </table>
 </details>
+
 *Then, you can run the following command.*
 
 ```python
