@@ -96,15 +96,15 @@ import torch.nn.functional as F
 
 def saliency_local_peaks(saliency_map: torch.Tensor, block_num=4):
     """
-    无循环版：将显著图划分成 block_num x block_num 块，提取每块最大值位置
+    saliency map ---> block_num x block_num
     :param saliency_map: [B, 1, H, W]
-    :param block_num: 每边划分多少块
-    :return: [B, block_num*block_num, 2] tensor, (y, x) 坐标
+    :param block_num: How many pieces per side
+    :return: [B, block_num*block_num, 2] tensor, (y, x)
     """
     B, _, H, W = saliency_map.shape
     device = saliency_map.device
 
-    # 先resize到可以整除的尺寸
+    #
     new_H = (H // block_num) * block_num
     new_W = (W // block_num) * block_num
     saliency_map = F.interpolate(saliency_map, size=(new_H, new_W), mode='bilinear', align_corners=False)
