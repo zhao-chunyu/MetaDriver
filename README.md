@@ -205,7 +205,7 @@ pip install -r utils/requirements.txt
 
 ### 		[2] Run train
 
-> Before training, scripts you might use: `modify_yaml.py`: One-click to modify dataset path. [Details](models/Deployment.md#Utilities1)
+> Before training, scripts you might use: { `modify_yaml.py`: One-click to modify dataset path. [Details](models/Deployment.md#Utilities1) }
 
 *If you wish to train with our model, please use the command below.* 
 
@@ -240,7 +240,7 @@ sh scripts/test_MetaDriver.sh [datasaet] [split#] [backbone] [gpu]
 sh scripts/test_MetaDriver.sh metadada split0 resnet50 0
 ```
 
-> After testing, scripts you might use: `collect_metrics.py`: One-click to collect metrics data. [Details](models/Deployment.md#Utilities2)
+> After testing, scripts you might use: { `collect_metrics.py`: One-click to collect metrics data. [Details](models/Deployment.md#Utilities2) }
 
 <a name="run-visualization"></a>
 
@@ -302,7 +302,10 @@ sh scripts/train_PFENet.sh metadada split0 resnet50 0
 
 ## 🚀Demo [🔁](#start-anchor)
 
-<img src="assert\compare.png" style="zoom: 100%;">
+<div align="center">
+  <img src="assert\DADA.gif" alt="logo" width="1200" height="auto" />
+  <img src="assert\PSAD.gif" alt="logo" width="1200" height="auto" />
+</div>
 
 <a name="Cite"></a>
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="66ae7d33-0f0c-4676-8819-de0ecec2d6c7" name="3gpu">
+        <fileTransfer accessType="SFTP" host="222.18.54.29" port="24" sshConfigId="7841d18a-a8e0-4e70-9f4f-950926d768eb" sshConfig="3gpu">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
