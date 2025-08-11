@@ -308,11 +308,13 @@ sh scripts/train_PFENet.sh metadada split0 resnet50 0
   <img src="assert\DADA.gif" alt="logo" width="1200" height="auto" />
   <img src="assert\PSAD.gif" alt="logo" width="1200" height="auto" />
 </div>
+
 * **Case of Unseen Accident Scenario**
 
 <div align="center">
-  <img src="assert\accident.gif" alt="logo" width="1200" height="auto" />
+  <img src="assert\accident.gif" alt="logo" width="800" height="auto" />
 </div>
+
 <a name="Cite"></a>
 
 ## ⭐️Cite [🔁](#start-anchor)
