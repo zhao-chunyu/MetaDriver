@@ -68,7 +68,7 @@ Anonymous Author(s)
 
 we propose a framework that combines a one-shot learning strategy with scene-level semantic alignment, enabling the model to achieve human-like attentional perception in previously unseen scenarios. (named **MetaDriver**)
 
-<img src="assert\model.png" style="zoom: 100%;">
+<img src="assert\model.jpg" style="zoom: 100%;">
 
 1. **A one-shot learning framework for drivers' attention prediction**. 
 Inspired by how humans learn from limited examples, we filter support masks to extract salient regions, which are then used to guide a driver attention learner. Semantic alignment between support and query samples further refines model optimization.
@@ -302,11 +302,17 @@ sh scripts/train_PFENet.sh metadada split0 resnet50 0
 
 ## 🚀Demo [🔁](#start-anchor)
 
+* **Compare with SOTA Models**
+
 <div align="center">
   <img src="assert\DADA.gif" alt="logo" width="1200" height="auto" />
   <img src="assert\PSAD.gif" alt="logo" width="1200" height="auto" />
 </div>
+* **Case of Unseen Accident Scenario**
 
+<div align="center">
+  <img src="assert\accident.gif" alt="logo" width="1200" height="auto" />
+</div>
 <a name="Cite"></a>
 
 ## ⭐️Cite [🔁](#start-anchor)
