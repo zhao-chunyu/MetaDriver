@@ -75,7 +75,7 @@ A Novel One-Shot Learning Framework for Driver Saliency Prediction. We propose M
 2. **A Novel One-Shot Learning Framework for Driver Saliency Prediction**. 
 To address noisy attention labels and limited semantic overlap, SMF removes irrelevant background while SSA aligns salient features between support and query pairs, significantly boosting our model’s performance.
 3. **Extensive Evaluation on DADA-52i and PSAD-4i with Strong Generalization and SOTA Results**. 
-It exceeds 10 baselines on both datasets and different backbones, achieving up to **+34.3%** CC, **+45.2%** SIM and ** –31.2%** KLD gains under oracle-support. These results highlight its robustness and backbone-agnostic design.
+It exceeds 10 baselines on both datasets and different backbones, achieving up to **+34.3%** CC, **+45.2%** SIM and **–31.2%** KLD gains under oracle-support. These results highlight its robustness and backbone-agnostic design.
 
 <a name="Datasets"></a>
 
