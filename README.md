@@ -70,12 +70,12 @@ we propose a framework that combines a one-shot learning strategy with scene-lev
 
 <img src="assert\model.jpg" style="zoom: 100%;">
 
-1. **A one-shot learning framework for drivers' attention prediction**. 
-Inspired by how humans learn from limited examples, we filter support masks to extract salient regions, which are then used to guide a driver attention learner. Semantic alignment between support and query samples further refines model optimization.
-2. **Two novel modules: Saliency Map Filter and Salient Semantic Alignment**. 
-Since driver attention masks are often dispersed and semantic overlap between query-support pairs exists only in salient regions, we filter out irrelevant mask information and align salient semantic features to boost prediction accuracy.
-3. **Extensive evaluation on DADA-52i and PSAD-4i with SOTA results**. 
-Our method consistently outperforms 10 competitive baselines across both datasets and backbones (Resnet-50, Vgg-16), surpassing existing driver saliency prediction and one/few-shot models.
+1. **A Novel One-Shot Learning Framework for Driver Saliency Prediction**. 
+A Novel One-Shot Learning Framework for Driver Saliency Prediction. We propose MetaDriver, inspired by how drivers generalize from limited examples. It filters salient regions from support masks to guide attention learning and uses semantic alignment to improve crossscene generalization.
+2. **A Novel One-Shot Learning Framework for Driver Saliency Prediction**. 
+To address noisy attention labels and limited semantic overlap, SMF removes irrelevant background while SSA aligns salient features between support and query pairs, significantly boosting our model’s performance.
+3. **Extensive Evaluation on DADA-52i and PSAD-4i with Strong Generalization and SOTA Results**. 
+It exceeds 10 baselines on both datasets and different backbones, achieving up to **+34.3%** CC, **+45.2%** SIM and ** –31.2%** KLD gains under oracle-support. These results highlight its robustness and backbone-agnostic design.
 
 <a name="Datasets"></a>
 
