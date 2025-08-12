@@ -232,12 +232,6 @@ class OneModel(nn.Module):
         query_feat = self.down_query(query_feat)
 
         mask = rearrange(s_y, "b n h w -> (b n) 1 h w")
-        # mask = (mask == 1).float()
-        # mask = (mask >= 0.0).float()
-        # mask = (mask >= 0.5).float()
-        # ========================================
-        # [SMF] Saliency Map Filter
-        # [s]=====================================
         b, c, h, w = s_y.shape
         sal_center_vals = saliency_local_peaks(s_y)
         threshold = 0.1
@@ -246,13 +240,9 @@ class OneModel(nn.Module):
         total_sum = selected_vals.sum(dim=1)
         total_count = real_sal_center.sum(dim=1)
 
-        # filter_threshold = total_sum / (total_count + 1e-6)
-        filter_threshold = torch.norm(selected_vals.view(selected_vals.size(0), -1), p=2, dim=1) / total_count
-
+        filter_threshold = torch.norm(selected_vals.view(selected_vals.size(0), -1), p=2, dim=1) / (total_count + 1e-6)
         filter_threshold = filter_threshold.view(b, 1, 1, 1).expand(b, -1, h, w)
         mask = torch.where(s_y > filter_threshold, s_y, torch.tensor(0.0))
-        # [e]=====================================
-
 
         s_x = rearrange(s_x, "b n c h w -> (b n) c h w")
         supp_feat_0, supp_feat_1, supp_feat_2, supp_feat_3, supp_feat_4, supp_feat_5 = self.extract_feats(s_x, mask)
@@ -270,8 +260,6 @@ class OneModel(nn.Module):
         supp_feat_list = [supp_feat_item[:, i, ...] for i in range(self.shot)]
 
         if self.shot == 1:
-            # similarity2 = get_similarity(query_feat_4, supp_feat_4, s_y)
-            # similarity1 = get_similarity(query_feat_5, supp_feat_5, s_y)
             similarity2 = get_similarity(query_feat_4, supp_feat_4, mask)
             similarity1 = get_similarity(query_feat_5, supp_feat_5, mask)
         else:
@@ -325,17 +313,6 @@ class OneModel(nn.Module):
         meta_map_bg = meta_out_soft[:, 0:1, :, :]
         meta_map_fg = meta_out_soft[:, 1:, :, :]
 
-        # if self.training and self.cls_type == 'Base':
-        #     c_id_array = torch.arange(self.base_classes + 1, device='cuda')
-        #     base_map_list = []
-        #     for b_id in range(bs):
-        #         c_id = cat_idx[0][b_id] + 1
-        #         c_mask = (c_id_array != 0) & (c_id_array != c_id)
-        #         base_map_list.append(base_out_soft[b_id, c_mask, :, :].unsqueeze(0).sum(1, True))
-        #     base_map = torch.cat(base_map_list, 0)
-        # else:
-        #     base_map = base_out_soft[:, 1:, :, :].sum(1, True)
-
         base_map = base_out_soft[:, 1:, :, :].sum(1, True)
 
         meta_out = self.cls_merge3(meta_out)  # new add
@@ -361,16 +338,8 @@ class OneModel(nn.Module):
         base_map = F.interpolate(base_map, size=(h, w), mode='bilinear', align_corners=True)
         final_out = F.interpolate(final_out, size=(h, w), mode='bilinear', align_corners=True)
 
-        # ========================================
-        # [SSA] Salient Semantic Alignment module
-        # [s]=====================================
-
         sal_sup = s_y * (s_x.squeeze(1))
         sal_que = final_out * x
-
-        # alpha = 0.5
-        # sal_sup = alpha * (s_y * (s_x.squeeze(1))) + (1 - alpha) * s_x
-        # sal_que = alpha * final_out * x + (1 - alpha) * x
 
         torch_resize = Resize([224, 224])
         sal_sup = torch_resize(sal_sup)
@@ -378,7 +347,6 @@ class OneModel(nn.Module):
         with torch.no_grad():
             sem_sal_sup = self.clip_model.encode_image(sal_sup)
             sem_sal_que = self.clip_model.encode_image(sal_que)
-        # [e]=====================================
 
         y_m = y_m.unsqueeze(1)
         y_b = y_b.unsqueeze(1)

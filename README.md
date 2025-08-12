@@ -70,8 +70,7 @@ we propose a framework that combines a one-shot learning strategy with scene-lev
 
 <img src="assert\model.jpg" style="zoom: 100%;">
 
-1. **A Novel One-Shot Learning Framework for Driver Saliency Prediction**. 
-A Novel One-Shot Learning Framework for Driver Saliency Prediction. We propose MetaDriver, inspired by how drivers generalize from limited examples. It filters salient regions from support masks to guide attention learning and uses semantic alignment to improve crossscene generalization.
+1. **A Novel One-Shot Learning Framework for Driver Saliency Prediction**. We propose MetaDriver, inspired by how drivers generalize from limited examples. It filters salient regions from support masks to guide attention learning and uses semantic alignment to improve cross scene generalization.
 2. **A Novel One-Shot Learning Framework for Driver Saliency Prediction**. 
 To address noisy attention labels and limited semantic overlap, SMF removes irrelevant background while SSA aligns salient features between support and query pairs, significantly boosting our model’s performance.
 3. **Extensive Evaluation on DADA-52i and PSAD-4i with Strong Generalization and SOTA Results**. 
