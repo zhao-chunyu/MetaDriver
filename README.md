@@ -42,22 +42,22 @@ Anonymous Author(s)
 ## 🔥Update
 
 
-- **2025/05/16**: We provide two handy scripts.
+- **2025/07/16**: We provide two handy scripts.
     - `modify_yaml.py`: One-click to modify dataset path. [script](models/Deployment.md#Utilities1)
     - `collect_metrics.py`: One-click to collect metrics data. [script](models/Deployment.md#Utilities2)
 
-- **2025/05/02**: All the code and models are completed.
+- **2025/06/20**: All the code and models are completed.
     - How to configure:  [command](#envir-anchor) & [script](models/Deployment.md#MetaDriver1)
     - How to train:  [command](#run-train)
     - How to evaluate:  [command](#run-test )
     - How to visualize:  [command](#run-visualization )
 
-- **2025/03/05**: We collect existing meta-learning methods for driver saliency prediction.
+- **2025/04/19**: We collect existing meta-learning methods for driver saliency prediction.
      - Environment configuration
      	- *metadriver_ori*: `PFENet (TPAMI'22)`, `BAM (CVPR'22)`. [Details](models/Deployment.md#fewshot1)
      	- *metadriver_mmcv*: `HDMNet (CVPR'23)`, `AMNet (NIPS'23)`, `AENet (ECCV'24)`. [Details](models/Deployment.md#fewshot2)
      - How to use: [command](#run-fewshot) & [script](models/Deployment.md#fewshot)
-- **2025/02/01**: We collect driving accident data with data categories, divided into 4 folds by category.
+- **2025/02/15**: We collect driving accident data with data categories, divided into 4 folds by category.
     - DADA: 52 categories. It repartitioned into `DADA-52i`.
     - PSAD: 4 categories. It repartitioned into `PSAD-4i`.
 - **2025/01/11**: We propose a model in order to ``learn to learn`` driver attention in driving accident scenarios.
